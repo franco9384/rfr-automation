@@ -1,3 +1,5 @@
+require('dotenv').config(),
+
 exports.config = {
   output: './output',
   helpers: {
@@ -21,9 +23,13 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    loginPage: "./pages/login.js"
+    loginPage: "./pages/login_page.js"
   },
-  mocha: {},
+  mocha: {
+    reporterOptions: {
+      reportDir: "output"
+  },
+  },
   bootstrap: null,
   timeout: null,
   teardown: null,
@@ -40,21 +46,15 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     },
-    stepByStepReport: {
-      enabled: true
-    },
-    debugErrors: {
-      enabled: true,
-    }
   },
-  stepTimeout: 0,
+  stepTimeout: 50,
   stepTimeoutOverride: [{
       pattern: 'wait.*',
-      timeout: 0
+      timeout: 50
     },
     {
       pattern: 'amOnPage',
-      timeout: 0
+      timeout: 50
     }
   ],
   tests: './tests/*_test.js',
