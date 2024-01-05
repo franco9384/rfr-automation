@@ -7,9 +7,9 @@ https://codecept.io/installation/
 Instale Appium Doctor para verificar si esta bien las instalaciones:
 https://codecept.io/mobile/#setting-up 
 
-Inicialice CodeceptJS con init el comando: (omita las comillas)
+Inicialice CodeceptJS con init el comando:
 "npx codeceptjs init"
 
-Una vez que haya configurado Appium, cree la primera prueba ejecutando: (omita las comillas)
+Una vez que haya configurado Appium, cree la primera prueba ejecutando:
 "npx codeceptjs gt"
 
